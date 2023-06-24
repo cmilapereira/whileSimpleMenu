@@ -1,0 +1,35 @@
+print('***Calculadora***')
+print('+Preencha os valores abaixo+')
+primeiro = int(input('Primeiro valor: '))
+segundo = int(input('Segundo valor: '))
+base = 0
+print(' **MENU** \n [ 1 ] SOMAR \n [ 2 ] MULTIPLICAR \n [ 3 ] MAIOR \n [ 4 ] NOVOS NÚMEROS \n [ 5 ] SAIR DO PROGRAMA')
+opcao = int(input('>>>>> Qual é a sua opção?'))
+
+while not opcao == 5:
+    if opcao == 1:
+        base = primeiro + segundo
+        print('A soma dos valores é:', base)
+        opcao = int(input('>>>>>> Escolha uma nova opção:'))
+    if opcao == 2:
+        base = primeiro * segundo
+        print('A multiplicação dos valores é:', base)
+        opcao = int(input('>>>>>> Escolha uma nova opção:'))
+    if opcao == 3:
+          if primeiro > segundo:
+              print('O número {} é maior'.format(primeiro))
+              opcao = int(input('>>>>>> Escolha uma nova opção:'))
+          if segundo  > primeiro:
+              print('O número {} é maior'.format(segundo))
+              opcao = int(input('>>>>>> Escolha uma nova opção:'))
+          if primeiro == segundo:
+              print(' Os números são iguais!')
+              opcao = int(input('>>>>>> Escolha uma nova opção:'))
+    if opcao == 4:
+        primeiro = int(input('Primeiro valor: '))
+        s = int(input('Segundo Valor:  '))
+        opcao = int(input('>>>>>> Escolha uma nova opção:'))
+    else:
+        print('Opção invalida, tente novamente:')
+        opcao = int(input('>>>>>> Escolha uma nova opção:'))
+print('Obrigada por usar nosso sistema!')
